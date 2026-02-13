@@ -104,3 +104,41 @@ a {
     transform: scale(1.08);
     box-shadow: 0 0 20px #00bfff;
 }
+
+.featured {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.artist-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.artist-card h3 {
+    font-weight: 500;
+}
+
+.artist-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,191,255,0.4);
+}
