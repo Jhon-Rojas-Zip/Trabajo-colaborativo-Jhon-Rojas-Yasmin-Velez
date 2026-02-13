@@ -225,3 +225,21 @@ a {
         transform: translateY(0);
     }
 }
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .featured,
+    .plans {
+        padding: 60px 30px;
+    }
+
+}
