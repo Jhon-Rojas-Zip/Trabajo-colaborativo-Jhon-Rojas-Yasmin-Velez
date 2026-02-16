@@ -1,0 +1,201 @@
+/* ============================= */
+/* RESET Y CONFIGURACIÓN GLOBAL */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.85)
+    ),
+    url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1470&auto=format&fit=crop")
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* ============================= */
+/* CONTENEDOR PRINCIPAL */
+/* ============================= */
+
+.login-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================= */
+/* TARJETA LOGIN */
+/* ============================= */
+
+.login-card {
+    background-color: #111111;
+    padding: 50px 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.15);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* ============================= */
+/* HEADER LOGIN */
+/* ============================= */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* ============================= */
+/* FORMULARIO */
+/* ============================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #aaaaaa;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al enfocar */
+.input-group input:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 8px #00bfff;
+}
+
+/* ============================= */
+/* OPCIONES (REMEMBER / FORGOT) */
+/* ============================= */
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #aaaaaa;
+}
+
+.forgot {
+    color: #00bfff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.forgot:hover {
+    opacity: 0.7;
+}
+
+/* ============================= */
+/* BOTÓN LOGIN */
+/* ============================= */
+
+.btn-login {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background-color: #00bfff;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* ============================= */
+/* LINK REGISTRO */
+/* ============================= */
+
+.register-link {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaaaaa;
+}
+
+.register-link a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 40px 25px;
+    }
+
+}
