@@ -32,9 +32,6 @@ body::after {
 .register-container {
     position: relative;
     z-index: 2;
-}
-
-.register-container {
     width: 100%;
     padding: 30px;
     display: flex;
@@ -92,10 +89,16 @@ body::after {
     letter-spacing: 1px;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
 .input-group label {
     font-size: 0.85rem;
     margin-bottom: 8px;
-    color: #999;
+    color: #bbbbbb;
+    font-weight: 600;
 }
 
 .input-group input {

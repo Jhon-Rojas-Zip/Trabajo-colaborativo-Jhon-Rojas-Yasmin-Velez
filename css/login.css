@@ -89,11 +89,18 @@ body::after {
     gap: 25px;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
 .input-group label {
     font-size: 0.85rem;
     margin-bottom: 8px;
-    color: #999;
+    color: #bbbbbb;
+    font-weight: 600;
 }
+
 
 .input-group input {
     padding: 15px;
