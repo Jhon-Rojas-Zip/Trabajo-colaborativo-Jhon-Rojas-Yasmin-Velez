@@ -18,6 +18,22 @@ body {
     color: #ffffff;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    top: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,191,255,0.12), transparent 70%);
+    z-index: 0;
+}
+
+.register-container {
+    position: relative;
+    z-index: 2;
+}
+
 .register-container {
     width: 100%;
     padding: 30px;
@@ -36,6 +52,11 @@ body {
     border: 1px solid rgba(255,255,255,0.06);
     box-shadow: 0 35px 90px rgba(0,0,0,0.6);
     animation: fadeScale 0.9s ease forwards;
+    transition: 0.4s ease;
+}
+
+.register-card:hover {
+    transform: translateY(-6px);
 }
 
 .register-header {
@@ -62,6 +83,15 @@ body {
     gap: 26px;
 }
 
+.brand {
+    font-size: 2.3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg,#00bfff,#4facfe,#00e5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
 .input-group label {
     font-size: 0.85rem;
     margin-bottom: 8px;
@@ -78,6 +108,14 @@ body {
     transition: all 0.3s ease;
 }
 
+.input-group input:hover {
+    border-color: #00bfff;
+}
+
+.input-group input::placeholder {
+    color: #555;
+    letter-spacing: 0.5px;
+}
 
 .input-group input:focus {
     outline: none;
@@ -102,6 +140,11 @@ body {
     transform: scale(1.1);
 }
 
+.terms label:hover {
+    color: #00bfff;
+    transition: 0.3s ease;
+}
+
 .btn-register {
     margin-top: 15px;
     padding: 16px;
@@ -118,7 +161,11 @@ body {
 
 .btn-register:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 0 35px rgba(0,191,255,0.7);
+    box-shadow: 0 0 45px rgba(0,191,255,0.9);
+}
+
+.btn-register:active {
+    transform: scale(0.97);
 }
 
 .login-link {
@@ -132,6 +179,20 @@ body {
     color: #00bfff;
     font-weight: 600;
     transition: 0.3s ease;
+}
+
+.login-link a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #00bfff;
+    transition: 0.3s ease;
+    margin-top: 3px;
+}
+
+.login-link a:hover::after {
+    width: 100%;
 }
 
 .login-link a:hover {

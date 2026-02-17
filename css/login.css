@@ -18,12 +18,25 @@ body {
     color: #ffffff;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,191,255,0.15), transparent 70%);
+    z-index: 0;
+}
+
 .login-container {
     width: 100%;
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .login-card {
@@ -36,6 +49,12 @@ body {
     border: 1px solid rgba(255,255,255,0.06);
     box-shadow: 0 30px 80px rgba(0,0,0,0.6);
     animation: fadeUp 0.9s ease forwards;
+    transition: 0.4s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-6px);
+    transition: 0.4s ease;
 }
 
 .login-header {
@@ -48,6 +67,15 @@ body {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 12px;
+}
+
+.brand {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg,#00bfff,#4facfe,#00e5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
 }
 
 .login-header p {
@@ -75,6 +103,10 @@ body {
     color: #ffffff;
     font-size: 0.95rem;
     transition: all 0.3s ease;
+}
+
+.input-group input:hover {
+    border-color: #00bfff;
 }
 
 .input-group input:focus {
@@ -127,7 +159,11 @@ body {
 
 .btn-login:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 35px rgba(0,191,255,0.7);
+    box-shadow: 0 0 45px rgba(0,191,255,0.9);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
 }
 
 .register-link {
@@ -145,6 +181,20 @@ body {
 
 .register-link a:hover {
     opacity: 0.7;
+}
+
+.register-link a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #00bfff;
+    transition: 0.3s ease;
+    margin-top: 3px;
+}
+
+.register-link a:hover::after {
+    width: 100%;
 }
 
 @keyframes fadeUp {
