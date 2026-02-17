@@ -1,3 +1,7 @@
+/* ============================= */
+/* RESET Y BASE */
+/* ============================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@ body {
     background-color: #0f0f0f;
     color: #ffffff;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -16,21 +21,28 @@ a {
     color: inherit;
 }
 
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background-color: #111111;
+    padding: 18px 60px;
+    background: rgba(17,17,17,0.85);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: #00bfff;
+    letter-spacing: 1px;
 }
 
 .navbar ul {
@@ -41,25 +53,42 @@ a {
 
 .navbar li a {
     font-weight: 500;
-    transition: color 0.3s ease;
+    position: relative;
+    transition: 0.3s ease;
 }
 
-.navbar li a:hover {
-    color: #00bfff;
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #00bfff;
+    transition: 0.3s ease;
+}
+
+.navbar li a:hover::after {
+    width: 100%;
 }
 
 .btn-register {
     padding: 8px 18px;
-    background-color: #00bfff;
+    background: linear-gradient(135deg,#00bfff,#0080ff);
     border-radius: 20px;
     color: #000;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 700;
+    transition: 0.3s ease;
 }
 
 .btn-register:hover {
-    background-color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00bfff;
 }
+
+/* ============================= */
+/* HERO */
+/* ============================= */
 
 .hero {
     height: 90vh;
@@ -68,51 +97,53 @@ a {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-    ),
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
     url("https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=1470&auto=format&fit=crop")
     center/cover no-repeat;
 }
 
 .hero-content {
-    animation: fadeUp 1s ease forwards;
+    animation: fadeUp 1.2s ease forwards;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 35px;
     color: #cccccc;
 }
 
 .btn-primary {
-    padding: 15px 35px;
-    background-color: #00bfff;
+    padding: 16px 40px;
+    background: linear-gradient(135deg,#00bfff,#0080ff);
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 20px #00bfff;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00bfff;
 }
 
+/* ============================= */
+/* ARTISTAS */
+/* ============================= */
+
 .featured {
-    padding: 80px 60px;
+    padding: 100px 60px;
     text-align: center;
 }
 
 .featured h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
 }
 
 .artist-grid {
@@ -125,81 +156,79 @@ a {
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.4s ease;
+    cursor: pointer;
 }
 
 .artist-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-
-.artist-card h3 {
-    font-weight: 500;
+    transition: 0.4s ease;
 }
 
 .artist-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(0,191,255,0.4);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,191,255,0.3);
 }
 
+.artist-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* PLANES */
+/* ============================= */
+
 .plans {
-    padding: 80px 60px;
+    padding: 100px 60px;
     background-color: #111111;
     text-align: center;
 }
 
 .plans h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
 }
 
 .plan-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 40px;
 }
 
 .plan-card {
-    background-color: #1c1c1c;
-    padding: 40px 25px;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(180deg,#1c1c1c,#141414);
+    padding: 45px 30px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    border: 1px solid #222;
 }
 
-.plan-card h3 {
-    margin-bottom: 15px;
+.plan-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0,191,255,0.25);
 }
 
 .price {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 25px;
     color: #00bfff;
 }
 
-.plan-card ul {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.plan-card ul li {
-    margin-bottom: 10px;
-    color: #cccccc;
-}
-
 .plan-card button {
-    padding: 10px 25px;
+    padding: 12px 30px;
+    border-radius: 30px;
     border: none;
-    border-radius: 20px;
-    background-color: #00bfff;
-    font-weight: 600;
+    background: linear-gradient(135deg,#00bfff,#0080ff);
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .plan-card button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00bfff;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00bfff;
 }
 
 .plan-card.highlight {
@@ -207,18 +236,26 @@ a {
     transform: scale(1.05);
 }
 
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
 .footer {
-    padding: 30px;
+    padding: 35px;
     text-align: center;
     background-color: #0a0a0a;
     font-size: 0.9rem;
     color: #777;
 }
 
+/* ============================= */
+/* ANIMACIÓN */
+/* ============================= */
+
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(50px);
     }
     to {
         opacity: 1;
@@ -226,20 +263,25 @@ a {
     }
 }
 
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
 @media (max-width: 768px) {
 
     .navbar {
         flex-direction: column;
         gap: 15px;
+        padding: 20px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .featured,
     .plans {
-        padding: 60px 30px;
+        padding: 70px 30px;
     }
 
 }

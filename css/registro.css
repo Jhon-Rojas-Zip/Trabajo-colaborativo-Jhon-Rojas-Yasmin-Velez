@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(
         rgba(0,0,0,0.88),
         rgba(0,0,0,0.88)
@@ -32,6 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 /* ============================= */
@@ -39,12 +40,14 @@ body {
 /* ============================= */
 
 .register-card {
-    background-color: #111111;
+    background: rgba(17,17,17,0.85);
+    backdrop-filter: blur(12px);
     padding: 55px 45px;
-    border-radius: 18px;
+    border-radius: 20px;
     width: 100%;
-    max-width: 420px;
-    box-shadow: 0 0 50px rgba(0, 191, 255, 0.2);
+    max-width: 430px;
+    box-shadow: 0 0 50px rgba(0, 191, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.05);
     animation: fadeScale 0.8s ease forwards;
 }
 
@@ -54,16 +57,18 @@ body {
 
 .register-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .register-header h1 {
     color: #00bfff;
     margin-bottom: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
 .register-header p {
-    color: #cccccc;
+    color: #bbbbbb;
     font-size: 0.9rem;
 }
 
@@ -74,7 +79,7 @@ body {
 .register-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
 .input-group {
@@ -89,19 +94,21 @@ body {
 }
 
 .input-group input {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 10px;
     border: 1px solid #333;
     background-color: #1a1a1a;
     color: #ffffff;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
-/* Efecto focus */
+/* Efecto focus más elegante */
 .input-group input:focus {
     outline: none;
     border-color: #00bfff;
-    box-shadow: 0 0 10px #00bfff;
+    box-shadow: 0 0 12px rgba(0,191,255,0.5);
+    transform: scale(1.02);
 }
 
 /* ============================= */
@@ -113,8 +120,14 @@ body {
     color: #aaaaaa;
 }
 
+.terms label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 .terms input {
-    margin-right: 6px;
+    accent-color: #00bfff;
 }
 
 /* ============================= */
@@ -126,15 +139,16 @@ body {
     padding: 14px;
     border-radius: 30px;
     border: none;
-    background-color: #00bfff;
+    background: linear-gradient(135deg,#00bfff,#0080ff);
     color: #000;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .btn-register:hover {
-    transform: scale(1.07);
+    transform: scale(1.06);
     box-shadow: 0 0 25px #00bfff;
 }
 
@@ -143,7 +157,7 @@ body {
 /* ============================= */
 
 .login-link {
-    margin-top: 25px;
+    margin-top: 28px;
     text-align: center;
     font-size: 0.85rem;
     color: #aaaaaa;
@@ -152,11 +166,12 @@ body {
 .login-link a {
     color: #00bfff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 .login-link a:hover {
-    text-decoration: underline;
+    opacity: 0.7;
 }
 
 /* ============================= */
@@ -166,7 +181,7 @@ body {
 @keyframes fadeScale {
     from {
         opacity: 0;
-        transform: translateY(40px) scale(0.95);
+        transform: translateY(50px) scale(0.95);
     }
     to {
         opacity: 1;
@@ -179,9 +194,7 @@ body {
 /* ============================= */
 
 @media (max-width: 480px) {
-
     .register-card {
-        padding: 40px 25px;
+        padding: 45px 25px;
     }
-
 }

@@ -1,5 +1,5 @@
 /* ============================= */
-/* RESET Y CONFIGURACIÓN GLOBAL */
+/* RESET */
 /* ============================= */
 
 * {
@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0f0f0f;
+    background-color: #0b0b0b;
     color: #ffffff;
     height: 100vh;
     overflow: hidden;
@@ -22,7 +22,7 @@ body {
 
 .dashboard {
     display: flex;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
 }
 
 /* ============================= */
@@ -30,18 +30,19 @@ body {
 /* ============================= */
 
 .sidebar {
-    width: 240px;
-    background-color: #111111;
-    padding: 30px 20px;
+    width: 250px;
+    background: linear-gradient(180deg, #111111, #0d0d0d);
+    padding: 35px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border-right: 1px solid #1f1f1f;
+    border-right: 1px solid #1a1a1a;
 }
 
-.sidebar .logo h2 {
+.logo h2 {
     color: #00bfff;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
 }
 
 .menu ul {
@@ -49,19 +50,20 @@ body {
 }
 
 .menu ul li {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: #cccccc;
+    color: #b3b3b3;
     font-weight: 500;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .menu ul li a:hover {
     color: #00bfff;
-    padding-left: 5px;
+    transform: translateX(6px);
 }
 
 /* ============================= */
@@ -70,7 +72,7 @@ body {
 
 .main-content {
     flex: 1;
-    padding: 40px;
+    padding: 45px;
     overflow-y: auto;
 }
 
@@ -85,17 +87,18 @@ body {
 }
 
 /* ============================= */
-/* SECCIÓN BIENVENIDA */
+/* BIENVENIDA */
 /* ============================= */
 
 .welcome h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .welcome p {
-    color: #aaaaaa;
-    margin-bottom: 40px;
+    color: #9e9e9e;
+    margin-bottom: 50px;
 }
 
 /* ============================= */
@@ -103,57 +106,66 @@ body {
 /* ============================= */
 
 .albums h2 {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    font-weight: 600;
 }
 
 .album-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 35px;
 }
 
 .album-card {
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(180deg,#1a1a1a,#141414);
+    padding: 18px;
+    border-radius: 18px;
+    transition: all 0.35s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .album-card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 15px;
+    transition: transform 0.4s ease;
 }
 
 .album-card h3 {
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .album-card p {
     font-size: 0.85rem;
-    color: #aaaaaa;
+    color: #9e9e9e;
 }
 
-/* Hover potente */
+/* Hover elegante */
 .album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,191,255,0.25);
+}
+
+.album-card:hover img {
     transform: scale(1.08);
-    box-shadow: 0 0 30px rgba(0,191,255,0.4);
 }
 
 /* ============================= */
-/* REPRODUCTOR INFERIOR */
+/* REPRODUCTOR */
 /* ============================= */
 
 .player {
-    height: 80px;
-    background-color: #111111;
-    border-top: 1px solid #1f1f1f;
+    height: 85px;
+    background: linear-gradient(90deg,#111111,#0d0d0d);
+    border-top: 1px solid #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 45px;
 }
 
 .player-left p {
@@ -162,27 +174,27 @@ body {
 
 .player-left span {
     font-size: 0.8rem;
-    color: #aaaaaa;
+    color: #9e9e9e;
 }
 
 .player-controls button {
     background: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #ffffff;
-    margin: 0 10px;
+    margin: 0 15px;
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .player-controls button:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
     color: #00bfff;
 }
 
 .player-right {
     font-size: 0.8rem;
-    color: #aaaaaa;
+    color: #9e9e9e;
 }
 
 /* ============================= */
@@ -200,7 +212,10 @@ body {
     }
 
     .main-content {
-        padding: 20px;
+        padding: 25px;
     }
 
+    .player {
+        padding: 0 20px;
+    }
 }

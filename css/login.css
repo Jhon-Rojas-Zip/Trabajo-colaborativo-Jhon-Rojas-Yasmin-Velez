@@ -1,5 +1,5 @@
 /* ============================= */
-/* RESET Y CONFIGURACIÓN GLOBAL */
+/* RESET */
 /* ============================= */
 
 * {
@@ -24,7 +24,7 @@ body {
 }
 
 /* ============================= */
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR */
 /* ============================= */
 
 .login-container {
@@ -32,49 +32,53 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 /* ============================= */
-/* TARJETA LOGIN */
+/* TARJETA */
 /* ============================= */
 
 .login-card {
-    background-color: #111111;
-    padding: 50px 40px;
-    border-radius: 15px;
+    background: rgba(17,17,17,0.85);
+    backdrop-filter: blur(15px);
+    padding: 55px 45px;
+    border-radius: 20px;
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 40px rgba(0, 191, 255, 0.15);
+    max-width: 420px;
+    box-shadow: 0 0 50px rgba(0, 191, 255, 0.15);
+    border: 1px solid rgba(255,255,255,0.05);
     animation: fadeUp 0.8s ease forwards;
 }
 
 /* ============================= */
-/* HEADER LOGIN */
+/* HEADER */
 /* ============================= */
 
 .login-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .login-header h1 {
     color: #00bfff;
     margin-bottom: 10px;
+    font-size: 1.8rem;
 }
 
 .login-header p {
-    color: #cccccc;
+    color: #bbbbbb;
     font-size: 0.9rem;
 }
 
 /* ============================= */
-/* FORMULARIO */
+/* FORM */
 /* ============================= */
 
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
 }
 
 .input-group {
@@ -89,23 +93,24 @@ body {
 }
 
 .input-group input {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 10px;
     border: 1px solid #333;
     background-color: #1a1a1a;
     color: #ffffff;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
-/* Efecto al enfocar */
 .input-group input:focus {
     outline: none;
     border-color: #00bfff;
-    box-shadow: 0 0 8px #00bfff;
+    box-shadow: 0 0 10px rgba(0,191,255,0.5);
+    transform: scale(1.02);
 }
 
 /* ============================= */
-/* OPCIONES (REMEMBER / FORGOT) */
+/* OPCIONES */
 /* ============================= */
 
 .options {
@@ -118,14 +123,14 @@ body {
 .remember {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     color: #aaaaaa;
 }
 
 .forgot {
     color: #00bfff;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .forgot:hover {
@@ -133,31 +138,32 @@ body {
 }
 
 /* ============================= */
-/* BOTÓN LOGIN */
+/* BOTÓN */
 /* ============================= */
 
 .btn-login {
-    padding: 12px;
-    border-radius: 25px;
+    padding: 14px;
+    border-radius: 30px;
     border: none;
-    background-color: #00bfff;
+    background: linear-gradient(135deg,#00bfff,#0080ff);
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .btn-login:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00bfff;
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #00bfff;
 }
 
 /* ============================= */
-/* LINK REGISTRO */
+/* REGISTRO */
 /* ============================= */
 
 .register-link {
-    margin-top: 25px;
+    margin-top: 28px;
     text-align: center;
     font-size: 0.85rem;
     color: #aaaaaa;
@@ -166,7 +172,7 @@ body {
 .register-link a {
     color: #00bfff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .register-link a:hover {
@@ -174,13 +180,13 @@ body {
 }
 
 /* ============================= */
-/* ANIMACIONES */
+/* ANIMACIÓN */
 /* ============================= */
 
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(50px);
     }
     to {
         opacity: 1;
@@ -193,9 +199,7 @@ body {
 /* ============================= */
 
 @media (max-width: 480px) {
-
     .login-card {
-        padding: 40px 25px;
+        padding: 45px 25px;
     }
-
 }
