@@ -224,6 +224,16 @@ a {
     backdrop-filter: blur(10px);
 }
 
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.plan-card li {
+    margin-bottom: 10px;
+}
+
 .plan-card:hover {
     transform: translateY(-18px);
     box-shadow: 0 30px 60px rgba(0,191,255,0.25);
