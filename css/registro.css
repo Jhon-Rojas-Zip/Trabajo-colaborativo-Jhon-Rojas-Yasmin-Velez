@@ -1,5 +1,5 @@
 /* ============================= */
-/* RESET Y CONFIGURACIÓN GLOBAL */
+/* RESET */
 /* ============================= */
 
 * {
@@ -11,12 +11,11 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(
-        rgba(0,0,0,0.88),
-        rgba(0,0,0,0.88)
-    ),
-    url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1470&auto=format&fit=crop")
-    center/cover no-repeat;
+    background:
+        radial-gradient(circle at top, rgba(0,191,255,0.15), transparent 60%),
+        linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.96)),
+        url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1470&auto=format&fit=crop")
+        center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,148 +23,145 @@ body {
 }
 
 /* ============================= */
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR */
 /* ============================= */
 
 .register-container {
     width: 100%;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 /* ============================= */
-/* TARJETA REGISTRO */
+/* TARJETA */
 /* ============================= */
 
 .register-card {
-    background: rgba(17,17,17,0.85);
-    backdrop-filter: blur(12px);
-    padding: 55px 45px;
-    border-radius: 20px;
+    background: rgba(18,18,18,0.85);
+    backdrop-filter: blur(18px);
+    padding: 65px 55px;
+    border-radius: 28px;
     width: 100%;
-    max-width: 430px;
-    box-shadow: 0 0 50px rgba(0, 191, 255, 0.15);
-    border: 1px solid rgba(255,255,255,0.05);
-    animation: fadeScale 0.8s ease forwards;
+    max-width: 470px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 35px 90px rgba(0,0,0,0.6);
+    animation: fadeScale 0.9s ease forwards;
 }
 
 /* ============================= */
-/* HEADER REGISTRO */
+/* HEADER */
 /* ============================= */
 
 .register-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 .register-header h1 {
     color: #00bfff;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
     letter-spacing: 1px;
 }
 
 .register-header p {
-    color: #bbbbbb;
-    font-size: 0.9rem;
+    color: #aaaaaa;
+    font-size: 0.95rem;
 }
 
 /* ============================= */
-/* FORMULARIO */
+/* FORM */
 /* ============================= */
 
 .register-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column;
+    gap: 26px;
 }
 
 .input-group label {
     font-size: 0.85rem;
-    margin-bottom: 6px;
-    color: #aaaaaa;
+    margin-bottom: 8px;
+    color: #999;
 }
 
 .input-group input {
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #333;
-    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    background-color: #141414;
     color: #ffffff;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
 }
 
-/* Efecto focus más elegante */
+/* Focus más refinado */
 .input-group input:focus {
     outline: none;
     border-color: #00bfff;
-    box-shadow: 0 0 12px rgba(0,191,255,0.5);
-    transform: scale(1.02);
+    box-shadow: 0 0 18px rgba(0,191,255,0.5);
+    background-color: #1a1a1a;
 }
 
 /* ============================= */
-/* TÉRMINOS Y CONDICIONES */
+/* TÉRMINOS */
 /* ============================= */
 
 .terms {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #aaaaaa;
 }
 
 .terms label {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .terms input {
     accent-color: #00bfff;
+    transform: scale(1.1);
 }
 
 /* ============================= */
-/* BOTÓN REGISTRO */
+/* BOTÓN */
 /* ============================= */
 
 .btn-register {
-    margin-top: 10px;
-    padding: 14px;
-    border-radius: 30px;
+    margin-top: 15px;
+    padding: 16px;
+    border-radius: 40px;
     border: none;
     background: linear-gradient(135deg,#00bfff,#0080ff);
     color: #000;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
+    transition: all 0.35s ease;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
 }
 
 .btn-register:hover {
-    transform: scale(1.06);
-    box-shadow: 0 0 25px #00bfff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 35px rgba(0,191,255,0.7);
 }
 
 /* ============================= */
-/* LINK LOGIN */
+/* LOGIN LINK */
 /* ============================= */
 
 .login-link {
-    margin-top: 28px;
+    margin-top: 35px;
     text-align: center;
-    font-size: 0.85rem;
-    color: #aaaaaa;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 .login-link a {
     color: #00bfff;
-    text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
 }
@@ -175,13 +171,13 @@ body {
 }
 
 /* ============================= */
-/* ANIMACIONES */
+/* ANIMACIÓN */
 /* ============================= */
 
 @keyframes fadeScale {
     from {
         opacity: 0;
-        transform: translateY(50px) scale(0.95);
+        transform: translateY(60px) scale(0.96);
     }
     to {
         opacity: 1;
@@ -196,5 +192,6 @@ body {
 @media (max-width: 480px) {
     .register-card {
         padding: 45px 25px;
+        border-radius: 22px;
     }
 }
