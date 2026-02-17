@@ -25,15 +25,16 @@ body {
 .sidebar {
     width: 250px;
     background: linear-gradient(180deg, #111111, #0d0d0d);
-    padding: 35px 25px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #1a1a1a;
 }
 
 .logo h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 800;
+    margin-bottom: 2.5rem;
     background: linear-gradient(135deg,#00bfff,#4facfe,#00e5ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -44,12 +45,12 @@ body {
 }
 
 .menu ul li {
-    margin-bottom: 22px;
+    margin-bottom: 50px;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: #b3b3b3;
+    color: #ffffff;
     font-weight: 500;
     transition: all 0.3s ease;
     display: inline-block;
